@@ -39,6 +39,8 @@ RUN mkdir /opt/app-root/runtimes && \
     # Workaround for passing ssl_sa_cert and to ensure that Elyra redirects to a correct pipeline run URL
     patch /opt/app-root/lib/python3.9/site-packages/elyra/pipeline/kfp/kfp_authentication.py -i utils/kfp_authentication.patch && \
     patch /opt/app-root/lib/python3.9/site-packages/elyra/pipeline/kfp/processor_kfp.py -i utils/processor_kfp.patch && \
+    # Workaround to ensure that a correct placeholder URL is shown during a DSP runtime configuration
+    patch /opt/app-root/lib/python3.9/site-packages/elyra/metadata/schemas/kfp.json -i utils/kfp_json.patch && \
     # switch to Data Science Pipeline in component catalog \
     DIR_COMPONENT="/opt/app-root/lib/python3.9/site-packages/elyra/metadata/schemas/local-directory-catalog.json" && \
     FILE_COMPONENT="/opt/app-root/lib/python3.9/site-packages/elyra/metadata/schemas/local-file-catalog.json" && \

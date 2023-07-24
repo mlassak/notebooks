@@ -1,0 +1,20 @@
+--- v2	2023-07-24 13:32:33.969004509 +0200
++++ v1	2023-07-24 13:33:18.728307976 +0200
+@@ -50,7 +50,7 @@
+           "format": "uri",
+           "uihints": {
+             "category": "Data Science Pipelines",
+-            "ui:placeholder": "https://your-data-science-pipeline-service:port/pipeline"
++            "ui:placeholder": "https://your-data-science-pipeline-service/pipeline"
+           }
+         },
+         "public_api_endpoint": {
+@@ -60,7 +60,7 @@
+           "format": "uri",
+           "uihints": {
+             "category": "Data Science Pipelines",
+-            "ui:placeholder": "https://your-data-science-pipeline-service:port/pipeline"
++            "ui:placeholder": "https://your-data-science-pipeline-service/pipeline"
+           }
+         },
+         "user_namespace": {
